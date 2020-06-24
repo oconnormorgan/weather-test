@@ -14,18 +14,21 @@
 </head>
 
 <body>
-    @include('navigation.navbar')
-    <main class="container-fluid d-flex">
-        <div class="row">
-            <div class="col card">
-                @include('navigation.sidebar')
+    <div id="meteo" data-app>
+        @include('navigation.navbar')
+        <main class="container-fluid d-flex">
+            <div class="row">
+                <div class="col card">
+                    @include('navigation.sidebar')
+                </div>
+                <div class="col">
+                    @yield('content')
+                </div>
             </div>
-            <div class="col">
-                @yield('content')
-            </div>
-        </div>
-    </main>
-    @include('navigation.footer')
+        </main>
+        @include('navigation.footer')
+    </div>
+
 </body>
 
 <script src="{{ asset('js/app.js') }}"></script>
